@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD0FBE4E1DE0B1D80003F336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FBE4D1DE0B1D80003F336 /* AppDelegate.swift */; };
+		CD0FBE501DE0B1D80003F336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FBE4F1DE0B1D80003F336 /* ViewController.swift */; };
+		CD0FBE521DE0B1D80003F336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0FBE511DE0B1D80003F336 /* Assets.xcassets */; };
+		CD0FBE551DE0B1D80003F336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0FBE531DE0B1D80003F336 /* Main.storyboard */; };
+		CD0FBE601DE0B1D80003F336 /* LifeMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FBE5F1DE0B1D80003F336 /* LifeMeterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0FBE5C1DE0B1D80003F336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0FBE421DE0B1D80003F336 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0FBE491DE0B1D80003F336;
+			remoteInfo = LifeMeter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD0FBE4A1DE0B1D80003F336 /* LifeMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0FBE4D1DE0B1D80003F336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD0FBE4F1DE0B1D80003F336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD0FBE511DE0B1D80003F336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD0FBE541DE0B1D80003F336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD0FBE561DE0B1D80003F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0FBE5B1DE0B1D80003F336 /* LifeMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0FBE5F1DE0B1D80003F336 /* LifeMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeMeterTests.swift; sourceTree = "<group>"; };
+		CD0FBE611DE0B1D80003F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0FBE471DE0B1D80003F336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0FBE581DE0B1D80003F336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD0FBE411DE0B1D80003F336 = {
+			isa = PBXGroup;
+			children = (
+				CD0FBE4C1DE0B1D80003F336 /* LifeMeter */,
+				CD0FBE5E1DE0B1D80003F336 /* LifeMeterTests */,
+				CD0FBE4B1DE0B1D80003F336 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD0FBE4B1DE0B1D80003F336 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD0FBE4A1DE0B1D80003F336 /* LifeMeter.app */,
+				CD0FBE5B1DE0B1D80003F336 /* LifeMeterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD0FBE4C1DE0B1D80003F336 /* LifeMeter */ = {
+			isa = PBXGroup;
+			children = (
+				CD0FBE4D1DE0B1D80003F336 /* AppDelegate.swift */,
+				CD0FBE4F1DE0B1D80003F336 /* ViewController.swift */,
+				CD0FBE511DE0B1D80003F336 /* Assets.xcassets */,
+				CD0FBE531DE0B1D80003F336 /* Main.storyboard */,
+				CD0FBE561DE0B1D80003F336 /* Info.plist */,
+			);
+			path = LifeMeter;
+			sourceTree = "<group>";
+		};
+		CD0FBE5E1DE0B1D80003F336 /* LifeMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0FBE5F1DE0B1D80003F336 /* LifeMeterTests.swift */,
+				CD0FBE611DE0B1D80003F336 /* Info.plist */,
+			);
+			path = LifeMeterTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD0FBE491DE0B1D80003F336 /* LifeMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0FBE641DE0B1D80003F336 /* Build configuration list for PBXNativeTarget "LifeMeter" */;
+			buildPhases = (
+				CD0FBE461DE0B1D80003F336 /* Sources */,
+				CD0FBE471DE0B1D80003F336 /* Frameworks */,
+				CD0FBE481DE0B1D80003F336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeMeter;
+			productName = LifeMeter;
+			productReference = CD0FBE4A1DE0B1D80003F336 /* LifeMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD0FBE5A1DE0B1D80003F336 /* LifeMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0FBE671DE0B1D80003F336 /* Build configuration list for PBXNativeTarget "LifeMeterTests" */;
+			buildPhases = (
+				CD0FBE571DE0B1D80003F336 /* Sources */,
+				CD0FBE581DE0B1D80003F336 /* Frameworks */,
+				CD0FBE591DE0B1D80003F336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0FBE5D1DE0B1D80003F336 /* PBXTargetDependency */,
+			);
+			name = LifeMeterTests;
+			productName = LifeMeterTests;
+			productReference = CD0FBE5B1DE0B1D80003F336 /* LifeMeterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD0FBE421DE0B1D80003F336 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Brian Palmer";
+				TargetAttributes = {
+					CD0FBE491DE0B1D80003F336 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					CD0FBE5A1DE0B1D80003F336 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD0FBE491DE0B1D80003F336;
+					};
+				};
+			};
+			buildConfigurationList = CD0FBE451DE0B1D80003F336 /* Build configuration list for PBXProject "LifeMeter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD0FBE411DE0B1D80003F336;
+			productRefGroup = CD0FBE4B1DE0B1D80003F336 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD0FBE491DE0B1D80003F336 /* LifeMeter */,
+				CD0FBE5A1DE0B1D80003F336 /* LifeMeterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD0FBE481DE0B1D80003F336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0FBE521DE0B1D80003F336 /* Assets.xcassets in Resources */,
+				CD0FBE551DE0B1D80003F336 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0FBE591DE0B1D80003F336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD0FBE461DE0B1D80003F336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0FBE501DE0B1D80003F336 /* ViewController.swift in Sources */,
+				CD0FBE4E1DE0B1D80003F336 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0FBE571DE0B1D80003F336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0FBE601DE0B1D80003F336 /* LifeMeterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0FBE5D1DE0B1D80003F336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0FBE491DE0B1D80003F336 /* LifeMeter */;
+			targetProxy = CD0FBE5C1DE0B1D80003F336 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD0FBE531DE0B1D80003F336 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0FBE541DE0B1D80003F336 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD0FBE621DE0B1D80003F336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD0FBE631DE0B1D80003F336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		CD0FBE651DE0B1D80003F336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LifeMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD0FBE661DE0B1D80003F336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LifeMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CD0FBE681DE0B1D80003F336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LifeMeterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
+			};
+			name = Debug;
+		};
+		CD0FBE691DE0B1D80003F336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LifeMeterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD0FBE451DE0B1D80003F336 /* Build configuration list for PBXProject "LifeMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0FBE621DE0B1D80003F336 /* Debug */,
+				CD0FBE631DE0B1D80003F336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0FBE641DE0B1D80003F336 /* Build configuration list for PBXNativeTarget "LifeMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0FBE651DE0B1D80003F336 /* Debug */,
+				CD0FBE661DE0B1D80003F336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD0FBE671DE0B1D80003F336 /* Build configuration list for PBXNativeTarget "LifeMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0FBE681DE0B1D80003F336 /* Debug */,
+				CD0FBE691DE0B1D80003F336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD0FBE421DE0B1D80003F336 /* Project object */;
+}
