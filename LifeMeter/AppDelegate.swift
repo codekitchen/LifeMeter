@@ -22,6 +22,8 @@ let SHOW_PERCENTAGE = "showPercentage"
 let ICON_WIDTH = 21.0
 let ICON_HEIGHT = 16.0
 
+let ONE_HOUR : TimeInterval = 60.0 * 60.0
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
@@ -29,6 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var timeLeftMenuItem: NSMenuItem!
 
     let statusItem : NSStatusItem
+    var updateTimer : Timer?
 
     @IBAction func quit(_ sender: Any) {
         NSApp.terminate(self)
@@ -42,10 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     override init() {
         statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-
         super.init()
-        ensureDefaultSettings()
-        watchForChanges()
     }
 
     func drawStatusIcon(_ pctLeft: Double) -> NSImage {
@@ -69,6 +69,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserDefaults().addObserver(self, forKeyPath: LIFE_EXPECTANCY, options: .new, context: nil)
         UserDefaults().addObserver(self, forKeyPath: BIRTH_DATE, options: .new, context: nil)
         UserDefaults().addObserver(self, forKeyPath: SHOW_PERCENTAGE, options: .new, context: nil)
+        updateTimer = Timer.scheduledTimer(withTimeInterval: ONE_HOUR, repeats: true) {_ in
+            self.updateTimeLeft()
+        }
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -78,7 +81,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     deinit {
         UserDefaults().removeObserver(self, forKeyPath: LIFE_EXPECTANCY)
         UserDefaults().removeObserver(self, forKeyPath: BIRTH_DATE)
+        UserDefaults().removeObserver(self, forKeyPath: SHOW_PERCENTAGE)
         NSStatusBar.system().removeStatusItem(statusItem)
+        updateTimer?.invalidate()
     }
 
     func ensureDefaultSettings() {
@@ -91,9 +96,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = statusMenu
+
+        ensureDefaultSettings()
+        watchForChanges()
     }
 
     func updateTimeLeft() {
+        debugPrint(Date(), "updating time left")
         let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
         guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
         guard let eol = Calendar.current.date(byAdding: .year, value: lifeExpectancy, to: birthDate) else { return }
