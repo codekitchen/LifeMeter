@@ -16,6 +16,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LifeMeter" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="9PR-jc-6Vr" id="JlU-hU-cbM"/>
+                <outlet property="timeLeftMenuItem" destination="6uf-5W-Szi" id="npi-2Z-IzG"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -746,6 +747,10 @@
         </window>
         <menu title="Status Menu" id="9PR-jc-6Vr">
             <items>
+                <menuItem title="0:00" enabled="NO" id="6uf-5W-Szi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="PCG-an-g62"/>
                 <menuItem title="Show Percentage" id="MFE-K1-tPx">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

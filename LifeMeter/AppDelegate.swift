@@ -16,16 +16,19 @@ extension ClosedRange {
     }
 }
 
+let LIFE_EXPECTANCY = "lifeExpectancy"
+let BIRTH_DATE = "birthDate"
+let SHOW_PERCENTAGE = "showPercentage"
+let ICON_WIDTH = 21.0
+let ICON_HEIGHT = 16.0
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var timeLeftMenuItem: NSMenuItem!
 
     let statusItem : NSStatusItem
-
-    let LIFE_EXPECTANCY = "lifeExpectancy"
-    let BIRTH_DATE = "birthDate"
-    let SHOW_PERCENTAGE = "showPercentage"
 
     @IBAction func quit(_ sender: Any) {
         NSApp.terminate(self)
@@ -53,11 +56,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //        })
         //        return img
 
-        let statusImage = NSImage(named: "si-bg")!.copy() as! NSImage
-        statusImage.lockFocus()
-        NSImage(named: "si-fill")!.draw(at: NSPoint(x: 0, y:0), from: NSRect(x: 0, y: 0, width: (pctLeft * 21.0), height: 16), operation: .sourceOver, fraction: 1.0)
-        statusImage.unlockFocus()
-        //statusImage.isTemplate = true
+        let statusImage = NSImage(size: NSSize(width: ICON_WIDTH, height: ICON_HEIGHT), flipped: false, drawingHandler: { rect in
+            NSImage(named: "si-bg")?.draw(at: NSZeroPoint, from: NSRect(x: 0, y: 0, width: ICON_WIDTH, height: ICON_HEIGHT), operation: .sourceOver, fraction: 1.0)
+            NSImage(named: "si-fill")!.draw(at: NSPoint(x: 0, y:0), from: NSRect(x: 0, y: 0, width: (pctLeft * ICON_WIDTH), height: ICON_HEIGHT), operation: .sourceOver, fraction: 1.0)
+            return true
+        })
+        statusImage.isTemplate = true
         return statusImage
     }
 
@@ -93,7 +97,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
         guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
         guard let eol = Calendar.current.date(byAdding: .year, value: lifeExpectancy, to: birthDate) else { return }
-        let _ = Calendar.current.dateComponents([.year, .month, .day], from: Date(), to: eol)
+        let timeLeft = Calendar.current.dateComponents([.year, .month, .day], from: Date(), to: eol)
+        timeLeftMenuItem.title = formatTimeLeft(timeLeft)
 
         let totalSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: eol)
         let currentSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: Date())
@@ -108,11 +113,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         button.imagePosition = .imageRight
-        button.image = drawStatusIcon(pctLeft)
+        let statusIcon = drawStatusIcon(pctLeft)
+        button.image = statusIcon
     }
 
     func formatTimeLeft(_ timeLeft: DateComponents) -> String {
-        return String(format: "%0.2ld:%0.2ld:%0.2ld", timeLeft.year!, timeLeft.month!, timeLeft.day!)
+        return String(format: "%0.2ld years, %0.2ld months, %0.2ld days", timeLeft.year!, timeLeft.month!, timeLeft.day!)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
