@@ -767,7 +767,7 @@
                 <menuItem title="Quit Life Meter" id="Of3-6l-VHu">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="quit:" target="-1" id="ERr-tY-8te"/>
+                        <action selector="terminate:" target="-2" id="Lww-f6-Byl"/>
                     </connections>
                 </menuItem>
             </items>

@@ -33,10 +33,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem : NSStatusItem
     var updateTimer : Timer?
 
-    @IBAction func quit(_ sender: Any) {
-        NSApp.terminate(self)
-    }
-
     @IBAction func showSettings(_ sender: Any) {
         debugPrint("showing settings")
         NSApp.activate(ignoringOtherApps: true)
