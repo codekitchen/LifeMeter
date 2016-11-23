@@ -5,6 +5,6 @@
       location = "group:LifeMeterHelperApp/LifeMeterHelperApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:LifeMeter.xcodeproj">
+      location = "group:/Users/brianp/Programming/LifeMeter/Life Meter.xcodeproj">
    </FileRef>
 </Workspace>
