@@ -11,11 +11,11 @@ import Foundation
 class TimeLeft {
     let timeLeft: DateComponents
     let pctLeft: Double
-    
+
     init(now: Date = Date(), lifeExpectancy: Int, birthDate: Date) {
         let eol = Calendar.current.date(byAdding: .year, value: lifeExpectancy, to: birthDate)!
         timeLeft = Calendar.current.dateComponents([.year, .month, .day], from: Date(), to: eol)
-        
+
         let totalSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: eol)
         let currentSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: Date())
         pctLeft = 1 - Double(currentSeconds.day!) / Double(totalSeconds.day!)

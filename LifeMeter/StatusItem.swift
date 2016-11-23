@@ -32,7 +32,9 @@ class StatusItem : NSObject {
         let button = item.button!
 
         if showPercentage {
-            button.title = "\(Int(timeLeft.pctLeft * 100))% "
+            let titleText = "\(Int(timeLeft.pctLeft * 100))% "
+            let font = NSFont.systemFont(ofSize: 13)
+            button.attributedTitle = NSAttributedString(string: titleText, attributes: [NSFontAttributeName: font])
         } else {
             button.title = ""
         }
