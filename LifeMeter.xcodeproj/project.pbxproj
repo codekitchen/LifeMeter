@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4866801DE5537700AB3947 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD48667F1DE5537700AB3947 /* StatusItem.swift */; };
+		CD4866831DE5574A00AB3947 /* TimeLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4866821DE5574A00AB3947 /* TimeLeft.swift */; };
+		CD4E6AEE1DE3C86B00778E0D /* LifeMeterHelperApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD4E6AEC1DE3C6DA00778E0D /* LifeMeterHelperApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CD4E6AF11DE3C9D000778E0D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4E6AF01DE3C9D000778E0D /* ServiceManagement.framework */; };
+		CD4E6AF51DE3C9F700778E0D /* StartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4E6AF41DE3C9F700778E0D /* StartAtLoginController.m */; };
 		CDC86D761DE3AFCA00ED1A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */; };
 		CDC86D781DE3AFCA00ED1A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */; };
 		CDC86D7B1DE3AFCA00ED1A9B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D791DE3AFCA00ED1A9B /* MainMenu.xib */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD4E6AEB1DE3C6DA00778E0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD4E6AE71DE3C6DA00778E0D /* LifeMeterHelperApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD4E6AD71DE3C6D500778E0D;
+			remoteInfo = LifeMeterHelperApp;
+		};
 		CDC86D821DE3AFCA00ED1A9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDC86D6A1DE3AFC900ED1A9B /* Project object */;
@@ -25,7 +37,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD4E6AED1DE3C85300778E0D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				CD4E6AEE1DE3C86B00778E0D /* LifeMeterHelperApp.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CD48667F1DE5537700AB3947 /* StatusItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		CD4866821DE5574A00AB3947 /* TimeLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLeft.swift; sourceTree = "<group>"; };
+		CD4E6AE71DE3C6DA00778E0D /* LifeMeterHelperApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LifeMeterHelperApp.xcodeproj; path = LifeMeterHelperApp/LifeMeterHelperApp.xcodeproj; sourceTree = "<group>"; };
+		CD4E6AF01DE3C9D000778E0D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		CD4E6AF21DE3C9F700778E0D /* LifeMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeMeter-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD4E6AF31DE3C9F700778E0D /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
+		CD4E6AF41DE3C9F700778E0D /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
 		CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4E6AF11DE3C9D000778E0D /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +89,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4E6AE81DE3C6DA00778E0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E6AEC1DE3C6DA00778E0D /* LifeMeterHelperApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD4E6AEF1DE3C9CF00778E0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E6AF01DE3C9D000778E0D /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD4E6AF71DE3CA0700778E0D /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E6AF31DE3C9F700778E0D /* StartAtLoginController.h */,
+				CD4E6AF41DE3C9F700778E0D /* StartAtLoginController.m */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		CDC86D691DE3AFC900ED1A9B = {
 			isa = PBXGroup;
 			children = (
+				CD4E6AE71DE3C6DA00778E0D /* LifeMeterHelperApp.xcodeproj */,
 				CDC86D741DE3AFCA00ED1A9B /* LifeMeter */,
 				CDC86D841DE3AFCA00ED1A9B /* LifeMeterTests */,
 				CDC86D731DE3AFCA00ED1A9B /* Products */,
+				CD4E6AEF1DE3C9CF00778E0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +137,15 @@
 		CDC86D741DE3AFCA00ED1A9B /* LifeMeter */ = {
 			isa = PBXGroup;
 			children = (
+				CD4E6AF71DE3CA0700778E0D /* Vendor */,
 				CDC86D901DE3B10800ED1A9B /* Images */,
 				CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */,
+				CD4866821DE5574A00AB3947 /* TimeLeft.swift */,
+				CD48667F1DE5537700AB3947 /* StatusItem.swift */,
 				CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */,
 				CDC86D791DE3AFCA00ED1A9B /* MainMenu.xib */,
 				CDC86D7C1DE3AFCA00ED1A9B /* Info.plist */,
+				CD4E6AF21DE3C9F700778E0D /* LifeMeter-Bridging-Header.h */,
 			);
 			path = LifeMeter;
 			sourceTree = "<group>";
@@ -114,6 +178,7 @@
 				CDC86D6E1DE3AFC900ED1A9B /* Sources */,
 				CDC86D6F1DE3AFC900ED1A9B /* Frameworks */,
 				CDC86D701DE3AFC900ED1A9B /* Resources */,
+				CD4E6AED1DE3C85300778E0D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -155,6 +220,7 @@
 					CDC86D711DE3AFC900ED1A9B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6HMK6GJWMT;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					CDC86D801DE3AFCA00ED1A9B = {
@@ -176,6 +242,12 @@
 			mainGroup = CDC86D691DE3AFC900ED1A9B;
 			productRefGroup = CDC86D731DE3AFCA00ED1A9B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD4E6AE81DE3C6DA00778E0D /* Products */;
+					ProjectRef = CD4E6AE71DE3C6DA00778E0D /* LifeMeterHelperApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CDC86D711DE3AFC900ED1A9B /* LifeMeter */,
@@ -183,6 +255,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD4E6AEC1DE3C6DA00778E0D /* LifeMeterHelperApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LifeMeterHelperApp.app;
+			remoteRef = CD4E6AEB1DE3C6DA00778E0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CDC86D701DE3AFC900ED1A9B /* Resources */ = {
@@ -210,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4866801DE5537700AB3947 /* StatusItem.swift in Sources */,
 				CDC86D761DE3AFCA00ED1A9B /* AppDelegate.swift in Sources */,
+				CD4E6AF51DE3C9F700778E0D /* StartAtLoginController.m in Sources */,
+				CD4866831DE5574A00AB3947 /* TimeLeft.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +423,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6HMK6GJWMT;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LifeMeter/LifeMeter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -352,12 +441,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6HMK6GJWMT;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LifeMeter/LifeMeter-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -413,6 +505,7 @@
 				CDC86D8C1DE3AFCA00ED1A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDC86D8D1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "LifeMeterTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +514,7 @@
 				CDC86D8F1DE3AFCA00ED1A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

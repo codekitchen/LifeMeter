@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD4E6ADB1DE3C6D500778E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E6ADA1DE3C6D500778E0D /* AppDelegate.swift */; };
+		CD4E6ADD1DE3C6D500778E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4E6ADC1DE3C6D500778E0D /* Assets.xcassets */; };
+		CD4E6AE01DE3C6D500778E0D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4E6ADE1DE3C6D500778E0D /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD4E6AD71DE3C6D500778E0D /* LifeMeterHelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMeterHelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4E6ADA1DE3C6D500778E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD4E6ADC1DE3C6D500778E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD4E6ADF1DE3C6D500778E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CD4E6AE11DE3C6D500778E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD4E6AD41DE3C6D500778E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD4E6ACE1DE3C6D500778E0D = {
+			isa = PBXGroup;
+			children = (
+				CD4E6AD91DE3C6D500778E0D /* LifeMeterHelperApp */,
+				CD4E6AD81DE3C6D500778E0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD4E6AD81DE3C6D500778E0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E6AD71DE3C6D500778E0D /* LifeMeterHelperApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD4E6AD91DE3C6D500778E0D /* LifeMeterHelperApp */ = {
+			isa = PBXGroup;
+			children = (
+				CD4E6ADA1DE3C6D500778E0D /* AppDelegate.swift */,
+				CD4E6ADC1DE3C6D500778E0D /* Assets.xcassets */,
+				CD4E6ADE1DE3C6D500778E0D /* MainMenu.xib */,
+				CD4E6AE11DE3C6D500778E0D /* Info.plist */,
+			);
+			path = LifeMeterHelperApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD4E6AD61DE3C6D500778E0D /* LifeMeterHelperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4E6AE41DE3C6D500778E0D /* Build configuration list for PBXNativeTarget "LifeMeterHelperApp" */;
+			buildPhases = (
+				CD4E6AD31DE3C6D500778E0D /* Sources */,
+				CD4E6AD41DE3C6D500778E0D /* Frameworks */,
+				CD4E6AD51DE3C6D500778E0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeMeterHelperApp;
+			productName = LifeMeterHelperApp;
+			productReference = CD4E6AD71DE3C6D500778E0D /* LifeMeterHelperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD4E6ACF1DE3C6D500778E0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Brian Palmer";
+				TargetAttributes = {
+					CD4E6AD61DE3C6D500778E0D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6HMK6GJWMT;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CD4E6AD21DE3C6D500778E0D /* Build configuration list for PBXProject "LifeMeterHelperApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD4E6ACE1DE3C6D500778E0D;
+			productRefGroup = CD4E6AD81DE3C6D500778E0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD4E6AD61DE3C6D500778E0D /* LifeMeterHelperApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD4E6AD51DE3C6D500778E0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4E6ADD1DE3C6D500778E0D /* Assets.xcassets in Resources */,
+				CD4E6AE01DE3C6D500778E0D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD4E6AD31DE3C6D500778E0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4E6ADB1DE3C6D500778E0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD4E6ADE1DE3C6D500778E0D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD4E6ADF1DE3C6D500778E0D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD4E6AE21DE3C6D500778E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD4E6AE31DE3C6D500778E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		CD4E6AE51DE3C6D500778E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				INFOPLIST_FILE = LifeMeterHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD4E6AE61DE3C6D500778E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				INFOPLIST_FILE = LifeMeterHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD4E6AD21DE3C6D500778E0D /* Build configuration list for PBXProject "LifeMeterHelperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4E6AE21DE3C6D500778E0D /* Debug */,
+				CD4E6AE31DE3C6D500778E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4E6AE41DE3C6D500778E0D /* Build configuration list for PBXNativeTarget "LifeMeterHelperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4E6AE51DE3C6D500778E0D /* Debug */,
+				CD4E6AE61DE3C6D500778E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD4E6ACF1DE3C6D500778E0D /* Project object */;
+}

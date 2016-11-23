@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -13,20 +12,15 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LifeMeter" customModuleProvider="target">
-            <connections>
-                <outlet property="settingsWindow" destination="QvC-M9-y7g" id="gjZ-eN-XAW"/>
-                <outlet property="statusItem" destination="sBh-5C-SDq" id="fZv-xO-wNB"/>
-            </connections>
-        </customObject>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LifeMeterHelperApp" customModuleProvider="target"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="LifeMeter" id="1Xt-HY-uBw">
+                <menuItem title="LifeMeterHelperApp" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="LifeMeter" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="LifeMeterHelperApp" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About LifeMeter" id="5kV-Vb-QxS">
+                            <menuItem title="About LifeMeterHelperApp" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -40,7 +34,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide LifeMeter" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide LifeMeterHelperApp" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -58,7 +52,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit LifeMeter" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit LifeMeterHelperApp" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -671,7 +665,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="LifeMeter Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="LifeMeterHelperApp Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -681,129 +675,5 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="LifeMeter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-c5-SCq">
-                        <rect key="frame" x="18" y="323" width="69" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Birth Date:" id="g9K-vR-nZa">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5M-Og-4lV">
-                        <rect key="frame" x="93" y="320" width="97" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="aRY-u8-lfg">
-                            <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 08:00:00 -0800-->
-                                <timeZone key="timeZone" name="US/Pacific"/>
-                            </calendarDate>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        </datePickerCell>
-                        <connections>
-                            <binding destination="RM6-zp-seI" name="value" keyPath="values.birthDate" id="7Z2-hx-O4Y"/>
-                        </connections>
-                    </datePicker>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-Ll-LL2">
-                        <rect key="frame" x="20" y="298" width="104" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Life Expectancy:" id="gMT-hz-ms3">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvV-PB-E0k">
-                        <rect key="frame" x="130" y="295" width="96" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="6Gp-FK-uVF">
-                            <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="feH-ps-08q">
-                                <real key="minimum" value="1"/>
-                                <real key="maximum" value="150"/>
-                            </numberFormatter>
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <binding destination="RM6-zp-seI" name="value" keyPath="values.lifeExpectancy" id="ZYX-2H-Wa5">
-                                <dictionary key="options">
-                                    <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                    <bool key="NSConditionallySetsEditable" value="NO"/>
-                                </dictionary>
-                            </binding>
-                        </connections>
-                    </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-Kl-v0M">
-                        <rect key="frame" x="18" y="274" width="104" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Start at Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="K5s-6T-S9l">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <binding destination="jhb-6a-wOZ" name="value" keyPath="startAtLogin" id="wID-6L-4GC"/>
-                        </connections>
-                    </button>
-                </subviews>
-            </view>
-            <point key="canvasLocation" x="113" y="-100"/>
-        </window>
-        <menu title="Status Menu" id="9PR-jc-6Vr">
-            <items>
-                <menuItem title="0:00" enabled="NO" id="6uf-5W-Szi">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="PCG-an-g62"/>
-                <menuItem title="Show Percentage" id="MFE-K1-tPx">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <binding destination="RM6-zp-seI" name="value" keyPath="values.showPercentage" id="wnh-2K-j6C">
-                            <dictionary key="options">
-                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                <bool key="NSConditionallySetsEnabled" value="NO"/>
-                            </dictionary>
-                        </binding>
-                    </connections>
-                </menuItem>
-                <menuItem title="Settings..." id="6AT-IX-KtE">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="showSettings:" target="-1" id="NQV-es-OBg"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="1Wx-VF-m3f"/>
-                <menuItem title="Quit Life Meter" id="Of3-6l-VHu">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="terminate:" target="-2" id="Lww-f6-Byl"/>
-                    </connections>
-                </menuItem>
-            </items>
-            <point key="canvasLocation" x="113" y="-387"/>
-        </menu>
-        <userDefaultsController representsSharedInstance="YES" id="RM6-zp-seI"/>
-        <customObject id="jhb-6a-wOZ" userLabel="StartAtLogin" customClass="StartAtLoginController">
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="net.codekitchen.LifeMeterHelperApp"/>
-            </userDefinedRuntimeAttributes>
-        </customObject>
-        <customObject id="sBh-5C-SDq" userLabel="Status Item" customClass="StatusItem" customModule="LifeMeter" customModuleProvider="target">
-            <connections>
-                <outlet property="statusMenu" destination="9PR-jc-6Vr" id="dNa-5y-B57"/>
-                <outlet property="timeLeftMenuItem" destination="6uf-5W-Szi" id="fkM-eF-G12"/>
-            </connections>
-        </customObject>
     </objects>
 </document>

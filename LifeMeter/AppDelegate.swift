@@ -26,107 +26,55 @@ let ONE_HOUR : TimeInterval = 60.0 * 60.0
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var statusMenu: NSMenu!
-    @IBOutlet weak var timeLeftMenuItem: NSMenuItem!
+    @IBOutlet weak var settingsWindow: NSWindow!
+    @IBOutlet weak var statusItem: StatusItem!
 
-    let statusItem : NSStatusItem
     var updateTimer : Timer?
 
     @IBAction func showSettings(_ sender: Any) {
-        debugPrint("showing settings")
         NSApp.activate(ignoringOtherApps: true)
-        window.makeKeyAndOrderFront(sender)
+        settingsWindow.makeKeyAndOrderFront(sender)
     }
 
-    override init() {
-        statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-        super.init()
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        registerDefaultSettings()
+        updateTimeLeft()
+        watchForChanges()
     }
 
-    func drawStatusIcon(_ pctLeft: Double) -> NSImage {
-        //        let img = NSImage(size: NSSize(width: 21, height: 16), flipped: false, drawingHandler: { sz in
-        //            NSBezierPath(roundedRect: NSRect(x: 1, y: 2, width: 19, height: 12), xRadius: 2.0, yRadius: 2.0).stroke()
-        //            NSBezierPath(rect: NSRect(x: 3, y: 4, width: 15, height: 8)).fill()
-        //            return true
-        //        })
-        //        return img
+    func registerDefaultSettings() {
+        UserDefaults().register(defaults: [
+            LIFE_EXPECTANCY: 80,
+            BIRTH_DATE: Date.init(timeIntervalSince1970: 386146800),
+            SHOW_PERCENTAGE: true,
+            ])
+    }
 
-        let statusImage = NSImage(size: NSSize(width: ICON_WIDTH, height: ICON_HEIGHT), flipped: false, drawingHandler: { rect in
-            NSImage(named: "si-bg")?.draw(at: NSZeroPoint, from: NSRect(x: 0, y: 0, width: ICON_WIDTH, height: ICON_HEIGHT), operation: .sourceOver, fraction: 1.0)
-            NSImage(named: "si-fill")!.draw(at: NSPoint(x: 0, y:0), from: NSRect(x: 0, y: 0, width: (pctLeft * ICON_WIDTH), height: ICON_HEIGHT), operation: .sourceOver, fraction: 1.0)
-            return true
-        })
-        statusImage.isTemplate = true
-        return statusImage
+    func updateTimeLeft() {
+        let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
+        let showPercentage = UserDefaults().bool(forKey: SHOW_PERCENTAGE)
+        guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
+
+        let timeLeft = TimeLeft(lifeExpectancy: lifeExpectancy, birthDate: birthDate)
+        statusItem.update(timeLeft: timeLeft, showPercentage: showPercentage)
     }
 
     func watchForChanges() {
-        UserDefaults().addObserver(self, forKeyPath: LIFE_EXPECTANCY, options: .new, context: nil)
-        UserDefaults().addObserver(self, forKeyPath: BIRTH_DATE, options: .new, context: nil)
-        UserDefaults().addObserver(self, forKeyPath: SHOW_PERCENTAGE, options: .new, context: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(defaultsDidChange(note:)), name: UserDefaults.didChangeNotification, object: nil)
         updateTimer = Timer.scheduledTimer(withTimeInterval: ONE_HOUR, repeats: true) {_ in
             self.updateTimeLeft()
         }
     }
 
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        updateTimeLeft()
-    }
-
-    deinit {
-        UserDefaults().removeObserver(self, forKeyPath: LIFE_EXPECTANCY)
-        UserDefaults().removeObserver(self, forKeyPath: BIRTH_DATE)
-        UserDefaults().removeObserver(self, forKeyPath: SHOW_PERCENTAGE)
-        NSStatusBar.system().removeStatusItem(statusItem)
-        updateTimer?.invalidate()
-    }
-
-    func ensureDefaultSettings() {
-        UserDefaults().register(defaults: [
-            LIFE_EXPECTANCY: 80,
-            BIRTH_DATE: Date.init(timeIntervalSince1970: 386146800),
-            SHOW_PERCENTAGE: true,
-        ])
-    }
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.menu = statusMenu
-
-        ensureDefaultSettings()
-        watchForChanges()
-    }
-
-    func updateTimeLeft() {
-        debugPrint(Date(), "updating time left")
-        let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
-        guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
-        guard let eol = Calendar.current.date(byAdding: .year, value: lifeExpectancy, to: birthDate) else { return }
-        let timeLeft = Calendar.current.dateComponents([.year, .month, .day], from: Date(), to: eol)
-        timeLeftMenuItem.title = formatTimeLeft(timeLeft)
-
-        let totalSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: eol)
-        let currentSeconds = Calendar.current.dateComponents([.day], from: birthDate, to: Date())
-        let pctLeft = 1 - Double(currentSeconds.day!) / Double(totalSeconds.day!)
-
-        guard let button = statusItem.button else { return }
-
-        if UserDefaults().bool(forKey: SHOW_PERCENTAGE) {
-            button.title = "\(Int(pctLeft * 100))% "
-        } else {
-            button.title = ""
-        }
-
-        button.imagePosition = .imageRight
-        let statusIcon = drawStatusIcon(pctLeft)
-        button.image = statusIcon
-    }
-
-    func formatTimeLeft(_ timeLeft: DateComponents) -> String {
-        return String(format: "%0.2ld years, %0.2ld months, %0.2ld days", timeLeft.year!, timeLeft.month!, timeLeft.day!)
+    func defaultsDidChange(note : NSNotification) {
+        // TODO: I'm seeing odd behavior where if I call updateTimeLeft() synchronously in this notification,
+        // then UserDefaults().integer(forKey:) returns the registered default value instead of the user
+        // value (even though an earlier call in the same process returned the correct value).
+        // Google has been no help here, so I'm punting for now and scheduling the function to run
+        // soon in the future, which appears to fix the problem.
+        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: false) { _ in self.updateTimeLeft() }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 }
