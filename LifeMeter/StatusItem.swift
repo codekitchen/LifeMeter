@@ -9,6 +9,9 @@
 import Foundation
 import Cocoa
 
+let ICON_WIDTH = 24.0
+let ICON_HEIGHT = 16.0
+
 class StatusItem : NSObject {
     let item: NSStatusItem
     @IBOutlet weak var statusMenu: NSMenu!
@@ -32,7 +35,7 @@ class StatusItem : NSObject {
         let button = item.button!
 
         if showPercentage {
-            let titleText = "\(Int(timeLeft.pctLeft * 100))% "
+            let titleText = "\(Int(timeLeft.pctLeft * 100))%"
             let font = NSFont.systemFont(ofSize: 12.5)
             button.attributedTitle = NSAttributedString(string: titleText, attributes: [NSFontAttributeName: font])
         } else {

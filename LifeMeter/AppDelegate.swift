@@ -19,8 +19,6 @@ extension ClosedRange {
 let LIFE_EXPECTANCY = "lifeExpectancy"
 let BIRTH_DATE = "birthDate"
 let SHOW_PERCENTAGE = "showPercentage"
-let ICON_WIDTH = 21.0
-let ICON_HEIGHT = 16.0
 
 let ONE_HOUR : TimeInterval = 60.0 * 60.0
 
@@ -54,6 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
         let showPercentage = UserDefaults().bool(forKey: SHOW_PERCENTAGE)
         guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
+        
+        debugPrint(Date(), "updateTimeLeft()", lifeExpectancy, showPercentage, birthDate)
 
         let timeLeft = TimeLeft(lifeExpectancy: lifeExpectancy, birthDate: birthDate)
         statusItem.update(timeLeft: timeLeft, showPercentage: showPercentage)
