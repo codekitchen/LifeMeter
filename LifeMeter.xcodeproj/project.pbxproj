@@ -221,9 +221,9 @@
 				TargetAttributes = {
 					CDC86D711DE3AFC900ED1A9B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6HMK6GJWMT;
+						DevelopmentTeam = CDD65LJK48;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -434,9 +434,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LifeMeter/LifeMeter.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				DEVELOPMENT_TEAM = CDD65LJK48;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
@@ -454,9 +454,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LifeMeter/LifeMeter.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				DEVELOPMENT_TEAM = CDD65LJK48;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;

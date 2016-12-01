@@ -90,8 +90,8 @@
 				TargetAttributes = {
 					CD4E6AD61DE3C6D500778E0D = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 6HMK6GJWMT;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = CDD65LJK48;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -244,9 +244,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				DEVELOPMENT_TEAM = CDD65LJK48;
 				INFOPLIST_FILE = LifeMeterHelperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterHelperApp;
@@ -259,9 +259,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6HMK6GJWMT;
+				DEVELOPMENT_TEAM = CDD65LJK48;
 				INFOPLIST_FILE = LifeMeterHelperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterHelperApp;
@@ -289,6 +289,7 @@
 				CD4E6AE61DE3C6D500778E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
