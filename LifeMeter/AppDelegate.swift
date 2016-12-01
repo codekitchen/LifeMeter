@@ -19,6 +19,7 @@ extension ClosedRange {
 let LIFE_EXPECTANCY = "lifeExpectancy"
 let BIRTH_DATE = "birthDate"
 let SHOW_PERCENTAGE = "showPercentage"
+let SEEN_SETTINGS = "seenSettings"
 
 let ONE_HOUR : TimeInterval = 60.0 * 60.0
 
@@ -38,21 +39,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         registerDefaultSettings()
         updateTimeLeft()
         watchForChanges()
+        if (!UserDefaults.standard.bool(forKey: SEEN_SETTINGS)) {
+            debugPrint("first launch, showing the settings window")
+            showSettings(self)
+            UserDefaults.standard.set(true, forKey: SEEN_SETTINGS)
+        }
     }
 
     func registerDefaultSettings() {
-        UserDefaults().register(defaults: [
+        let twentyYearsAgo = Calendar.current.date(byAdding: .year, value: -20, to: Date())!
+        UserDefaults.standard.register(defaults: [
             LIFE_EXPECTANCY: 80,
-            BIRTH_DATE: Date.init(timeIntervalSince1970: 386146800),
+            BIRTH_DATE: twentyYearsAgo,
             SHOW_PERCENTAGE: true,
-            ])
+            SEEN_SETTINGS: false,
+        ])
     }
 
     func updateTimeLeft() {
-        let lifeExpectancy = (1...150).clamp(UserDefaults().integer(forKey: LIFE_EXPECTANCY))
-        let showPercentage = UserDefaults().bool(forKey: SHOW_PERCENTAGE)
-        guard let birthDate = UserDefaults().object(forKey: BIRTH_DATE) as? Date else { return }
-        
+        let lifeExpectancy = (1...150).clamp(UserDefaults.standard.integer(forKey: LIFE_EXPECTANCY))
+        let showPercentage = UserDefaults.standard.bool(forKey: SHOW_PERCENTAGE)
+        guard let birthDate = UserDefaults.standard.object(forKey: BIRTH_DATE) as? Date else { return }
+
         debugPrint(Date(), "updateTimeLeft()", lifeExpectancy, showPercentage, birthDate)
 
         let timeLeft = TimeLeft(lifeExpectancy: lifeExpectancy, birthDate: birthDate)
