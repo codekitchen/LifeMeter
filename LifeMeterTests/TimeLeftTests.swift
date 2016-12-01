@@ -72,4 +72,11 @@ class TimeLeftTests: XCTestCase {
         XCTAssert(timeLeft.timeLeft.month! == 3)
         XCTAssert(timeLeft.timeLeft.day! == 26)
     }
+
+    func testDisplayString() {
+        let birthDate = Date.init(timeIntervalSince1970: 386146800)
+        let now2016 = Date.init(timeIntervalSince1970: 1480625478)
+        let timeLeft = TimeLeft(now: now2016, lifeExpectancy: 85, birthDate: birthDate)
+        XCTAssert(timeLeft.formatTimeLeft() == "50 years, 3 months, 26 days")
+    }
 }

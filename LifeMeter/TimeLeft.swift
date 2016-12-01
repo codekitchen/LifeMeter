@@ -38,6 +38,6 @@ class TimeLeft {
     }
 
     func formatTimeLeft() -> String {
-        return String(format: "%0.2ld years, %0.2ld months, %0.2ld days", timeLeft.year!, timeLeft.month!, timeLeft.day!)
+        return String(format: "%ld years, %ld months, %ld days", timeLeft.year!, timeLeft.month!, timeLeft.day!)
     }
 }
