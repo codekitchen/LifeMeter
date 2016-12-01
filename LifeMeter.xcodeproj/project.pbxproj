@@ -15,9 +15,9 @@
 		CDC86D761DE3AFCA00ED1A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */; };
 		CDC86D781DE3AFCA00ED1A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */; };
 		CDC86D7B1DE3AFCA00ED1A9B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D791DE3AFCA00ED1A9B /* MainMenu.xib */; };
-		CDC86D861DE3AFCA00ED1A9B /* LifeMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC86D851DE3AFCA00ED1A9B /* LifeMeterTests.swift */; };
 		CDC86D931DE3B11A00ED1A9B /* si-bg@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D911DE3B11A00ED1A9B /* si-bg@2x.tiff */; };
 		CDC86D941DE3B11A00ED1A9B /* si-fill@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = CDC86D921DE3B11A00ED1A9B /* si-fill@2x.tiff */; };
+		CDD895491DF0CA7C00E53FEE /* TimeLeftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD895481DF0CA7C00E53FEE /* TimeLeftTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +64,10 @@
 		CDC86D7A1DE3AFCA00ED1A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CDC86D7C1DE3AFCA00ED1A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC86D811DE3AFCA00ED1A9B /* LifeMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDC86D851DE3AFCA00ED1A9B /* LifeMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeMeterTests.swift; sourceTree = "<group>"; };
 		CDC86D871DE3AFCA00ED1A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC86D911DE3B11A00ED1A9B /* si-bg@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "si-bg@2x.tiff"; path = "Assets.xcassets/si-bg@2x.tiff"; sourceTree = "<group>"; };
 		CDC86D921DE3B11A00ED1A9B /* si-fill@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "si-fill@2x.tiff"; path = "Assets.xcassets/si-fill@2x.tiff"; sourceTree = "<group>"; };
+		CDD895481DF0CA7C00E53FEE /* TimeLeftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLeftTests.swift; sourceTree = "<group>"; };
 		CDE4F5CB1DE564D0009D2030 /* LifeMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LifeMeter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +155,7 @@
 		CDC86D841DE3AFCA00ED1A9B /* LifeMeterTests */ = {
 			isa = PBXGroup;
 			children = (
-				CDC86D851DE3AFCA00ED1A9B /* LifeMeterTests.swift */,
+				CDD895481DF0CA7C00E53FEE /* TimeLeftTests.swift */,
 				CDC86D871DE3AFCA00ED1A9B /* Info.plist */,
 			);
 			path = LifeMeterTests;
@@ -310,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDC86D861DE3AFCA00ED1A9B /* LifeMeterTests.swift in Sources */,
+				CDD895491DF0CA7C00E53FEE /* TimeLeftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +379,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Life Meter";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -421,6 +422,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Life Meter";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
