@@ -58,7 +58,7 @@
 		CD4E6AF21DE3C9F700778E0D /* LifeMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeMeter-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD4E6AF31DE3C9F700778E0D /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
 		CD4E6AF41DE3C9F700778E0D /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
-		CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Meter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC86D7A1DE3AFCA00ED1A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		CDC86D731DE3AFCA00ED1A9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */,
+				CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */,
 				CDC86D811DE3AFCA00ED1A9B /* LifeMeterTests.xctest */,
 			);
 			name = Products;
@@ -188,7 +188,7 @@
 			);
 			name = LifeMeter;
 			productName = LifeMeter;
-			productReference = CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */;
+			productReference = CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CDC86D801DE3AFCA00ED1A9B /* LifeMeterTests */ = {
@@ -440,7 +440,8 @@
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = LifeMeter;
+				PRODUCT_NAME = "Life Meter";
 				SWIFT_OBJC_BRIDGING_HEADER = "LifeMeter/LifeMeter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -459,7 +460,8 @@
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = LifeMeter;
+				PRODUCT_NAME = "Life Meter";
 				SWIFT_OBJC_BRIDGING_HEADER = "LifeMeter/LifeMeter-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -477,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Meter.app/Contents/MacOS/Life Meter";
 			};
 			name = Debug;
 		};
@@ -493,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Meter.app/Contents/MacOS/Life Meter";
 			};
 			name = Release;
 		};
