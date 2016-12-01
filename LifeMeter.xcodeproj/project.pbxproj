@@ -58,12 +58,12 @@
 		CD4E6AF21DE3C9F700778E0D /* LifeMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeMeter-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD4E6AF31DE3C9F700778E0D /* StartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLoginController.h; sourceTree = "<group>"; };
 		CD4E6AF41DE3C9F700778E0D /* StartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLoginController.m; sourceTree = "<group>"; };
-		CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Meter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC86D751DE3AFCA00ED1A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC86D771DE3AFCA00ED1A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC86D7A1DE3AFCA00ED1A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CDC86D7C1DE3AFCA00ED1A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDC86D811DE3AFCA00ED1A9B /* Life MeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life MeterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC86D811DE3AFCA00ED1A9B /* LifeMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC86D851DE3AFCA00ED1A9B /* LifeMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeMeterTests.swift; sourceTree = "<group>"; };
 		CDC86D871DE3AFCA00ED1A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC86D911DE3B11A00ED1A9B /* si-bg@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "si-bg@2x.tiff"; path = "Assets.xcassets/si-bg@2x.tiff"; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		CDC86D731DE3AFCA00ED1A9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */,
-				CDC86D811DE3AFCA00ED1A9B /* Life MeterTests.xctest */,
+				CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */,
+				CDC86D811DE3AFCA00ED1A9B /* LifeMeterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,9 +173,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDC86D711DE3AFC900ED1A9B /* Life Meter */ = {
+		CDC86D711DE3AFC900ED1A9B /* LifeMeter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDC86D8A1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "Life Meter" */;
+			buildConfigurationList = CDC86D8A1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "LifeMeter" */;
 			buildPhases = (
 				CDC86D6E1DE3AFC900ED1A9B /* Sources */,
 				CDC86D6F1DE3AFC900ED1A9B /* Frameworks */,
@@ -186,14 +186,14 @@
 			);
 			dependencies = (
 			);
-			name = "Life Meter";
+			name = LifeMeter;
 			productName = LifeMeter;
-			productReference = CDC86D721DE3AFCA00ED1A9B /* Life Meter.app */;
+			productReference = CDC86D721DE3AFCA00ED1A9B /* LifeMeter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CDC86D801DE3AFCA00ED1A9B /* Life MeterTests */ = {
+		CDC86D801DE3AFCA00ED1A9B /* LifeMeterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDC86D8D1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "Life MeterTests" */;
+			buildConfigurationList = CDC86D8D1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "LifeMeterTests" */;
 			buildPhases = (
 				CDC86D7D1DE3AFCA00ED1A9B /* Sources */,
 				CDC86D7E1DE3AFCA00ED1A9B /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				CDC86D831DE3AFCA00ED1A9B /* PBXTargetDependency */,
 			);
-			name = "Life MeterTests";
+			name = LifeMeterTests;
 			productName = LifeMeterTests;
-			productReference = CDC86D811DE3AFCA00ED1A9B /* Life MeterTests.xctest */;
+			productReference = CDC86D811DE3AFCA00ED1A9B /* LifeMeterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDC86D6D1DE3AFC900ED1A9B /* Build configuration list for PBXProject "Life Meter" */;
+			buildConfigurationList = CDC86D6D1DE3AFC900ED1A9B /* Build configuration list for PBXProject "LifeMeter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -257,8 +257,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				CDC86D711DE3AFC900ED1A9B /* Life Meter */,
-				CDC86D801DE3AFCA00ED1A9B /* Life MeterTests */,
+				CDC86D711DE3AFC900ED1A9B /* LifeMeter */,
+				CDC86D801DE3AFCA00ED1A9B /* LifeMeterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,7 +319,7 @@
 /* Begin PBXTargetDependency section */
 		CDC86D831DE3AFCA00ED1A9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CDC86D711DE3AFC900ED1A9B /* Life Meter */;
+			target = CDC86D711DE3AFC900ED1A9B /* LifeMeter */;
 			targetProxy = CDC86D821DE3AFCA00ED1A9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -475,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Meter.app/Contents/MacOS/Life Meter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
 			};
 			name = Debug;
 		};
@@ -491,14 +491,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Meter.app/Contents/MacOS/Life Meter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeMeter.app/Contents/MacOS/LifeMeter";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDC86D6D1DE3AFC900ED1A9B /* Build configuration list for PBXProject "Life Meter" */ = {
+		CDC86D6D1DE3AFC900ED1A9B /* Build configuration list for PBXProject "LifeMeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDC86D881DE3AFCA00ED1A9B /* Debug */,
@@ -507,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDC86D8A1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "Life Meter" */ = {
+		CDC86D8A1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "LifeMeter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDC86D8B1DE3AFCA00ED1A9B /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDC86D8D1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "Life MeterTests" */ = {
+		CDC86D8D1DE3AFCA00ED1A9B /* Build configuration list for PBXNativeTarget "LifeMeterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDC86D8E1DE3AFCA00ED1A9B /* Debug */,

@@ -21,7 +21,7 @@ let BIRTH_DATE = "birthDate"
 let SHOW_PERCENTAGE = "showPercentage"
 let SEEN_SETTINGS = "seenSettings"
 
-let ONE_HOUR : TimeInterval = 60.0 * 60.0
+let ONE_HOUR = TimeInterval(60.0 * 60.0)
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
