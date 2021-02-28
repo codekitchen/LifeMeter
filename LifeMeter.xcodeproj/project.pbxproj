@@ -458,10 +458,12 @@
 				CODE_SIGN_ENTITLEMENTS = LifeMeter/LifeMeter.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = CDD65LJK48;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
 				PRODUCT_MODULE_NAME = LifeMeter;
 				PRODUCT_NAME = "Life Meter";
@@ -479,10 +481,12 @@
 				CODE_SIGN_ENTITLEMENTS = LifeMeter/LifeMeter.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = CDD65LJK48;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LifeMeter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.codekitchen.LifeMeter;
 				PRODUCT_MODULE_NAME = LifeMeter;
 				PRODUCT_NAME = "Life Meter";
