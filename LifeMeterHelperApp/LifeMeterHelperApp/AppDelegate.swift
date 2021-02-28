@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let bundlePath = Bundle.main.bundlePath
         let appPath = URL(fileURLWithPath: bundlePath).deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().path
-        NSWorkspace.shared().launchApplication(appPath)
+        NSWorkspace.shared.launchApplication(appPath)
         NSApp.terminate(nil)
     }
 

@@ -18,7 +18,7 @@ class StatusItem : NSObject {
     @IBOutlet weak var timeLeftMenuItem: NSMenuItem!
 
     override init() {
-        item = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+        item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         super.init()
     }
 
@@ -27,7 +27,7 @@ class StatusItem : NSObject {
     }
 
     deinit {
-        NSStatusBar.system().removeStatusItem(item)
+        NSStatusBar.system.removeStatusItem(item)
     }
 
     func update(timeLeft: TimeLeft, showPercentage: Bool) {
@@ -37,7 +37,7 @@ class StatusItem : NSObject {
         if showPercentage {
             let titleText = "\(Int(timeLeft.pctLeft * 100))%"
             let font = NSFont.systemFont(ofSize: 12.5)
-            button.attributedTitle = NSAttributedString(string: titleText, attributes: [NSFontAttributeName: font])
+            button.attributedTitle = NSAttributedString(string: titleText, attributes: [NSAttributedString.Key.font: font])
         } else {
             button.title = ""
         }

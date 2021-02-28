@@ -74,7 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func defaultsDidChange(note : NSNotification) {
+    @objc func defaultsDidChange(note : NSNotification) {
         // TODO: I'm seeing odd behavior where if I call updateTimeLeft() synchronously in this notification,
         // then UserDefaults().integer(forKey:) returns the registered default value instead of the user
         // value (even though an earlier call in the same process returned the correct value).
